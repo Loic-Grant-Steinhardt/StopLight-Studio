@@ -48,7 +48,7 @@
           "pet"
         ],
         "summary": "Add a new pet to the store",
-        "description": "",
+        "description": "test",
         "operationId": "addPet",
         "consumes": [
           "application/json",
@@ -70,8 +70,29 @@
           }
         ],
         "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          "201": {
+            "description": "Created",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
           "405": {
             "description": "Invalid input"
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
           }
         },
         "security": [
@@ -88,7 +109,7 @@
           "pet"
         ],
         "summary": "Update an existing pet",
-        "description": "",
+        "description": "test",
         "operationId": "updatePet",
         "consumes": [
           "application/json",
@@ -110,7 +131,7 @@
           }
         ],
         "responses": {
-          "400": {
+          "200": {
             "description": "Invalid ID supplied"
           },
           "404": {
@@ -282,7 +303,7 @@
           "pet"
         ],
         "summary": "Updates a pet in the store with form data",
-        "description": "",
+        "description": "test",
         "operationId": "updatePetWithForm",
         "consumes": [
           "application/x-www-form-urlencoded"
@@ -316,7 +337,7 @@
           }
         ],
         "responses": {
-          "405": {
+          "200": {
             "description": "Invalid input"
           }
         },
@@ -334,7 +355,7 @@
           "pet"
         ],
         "summary": "Deletes a pet",
-        "description": "",
+        "description": "test",
         "operationId": "deletePet",
         "produces": [
           "application/xml",
@@ -357,6 +378,13 @@
           }
         ],
         "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
           "400": {
             "description": "Invalid ID supplied"
           },
@@ -380,7 +408,7 @@
           "pet"
         ],
         "summary": "uploads an image",
-        "description": "",
+        "description": "test",
         "operationId": "uploadFile",
         "consumes": [
           "multipart/form-data"
@@ -467,7 +495,7 @@
           "store"
         ],
         "summary": "Place an order for a pet",
-        "description": "",
+        "description": "test",
         "operationId": "placeOrder",
         "produces": [
           "application/xml",
@@ -559,6 +587,13 @@
           }
         ],
         "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
           "400": {
             "description": "Invalid ID supplied"
           },
@@ -592,7 +627,7 @@
           }
         ],
         "responses": {
-          "default": {
+          "200": {
             "description": "successful operation"
           }
         }
@@ -604,7 +639,7 @@
           "user"
         ],
         "summary": "Creates list of users with given input array",
-        "description": "",
+        "description": "test",
         "operationId": "createUsersWithArrayInput",
         "produces": [
           "application/xml",
@@ -625,6 +660,13 @@
           }
         ],
         "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
           "default": {
             "description": "successful operation"
           }
@@ -637,7 +679,7 @@
           "user"
         ],
         "summary": "Creates list of users with given input array",
-        "description": "",
+        "description": "test",
         "operationId": "createUsersWithListInput",
         "produces": [
           "application/xml",
@@ -658,6 +700,13 @@
           }
         ],
         "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
           "default": {
             "description": "successful operation"
           }
@@ -670,7 +719,7 @@
           "user"
         ],
         "summary": "Logs user into the system",
-        "description": "",
+        "description": "test",
         "operationId": "loginUser",
         "produces": [
           "application/xml",
@@ -723,7 +772,7 @@
           "user"
         ],
         "summary": "Logs out current logged in user session",
-        "description": "",
+        "description": "test",
         "operationId": "logoutUser",
         "produces": [
           "application/xml",
@@ -731,7 +780,7 @@
         ],
         "parameters": [],
         "responses": {
-          "default": {
+          "200": {
             "description": "successful operation"
           }
         }
@@ -743,7 +792,7 @@
           "user"
         ],
         "summary": "Get user by user name",
-        "description": "",
+        "description": "test",
         "operationId": "getUserByName",
         "produces": [
           "application/xml",
@@ -803,7 +852,7 @@
           }
         ],
         "responses": {
-          "400": {
+          "200": {
             "description": "Invalid user supplied"
           },
           "404": {
@@ -832,7 +881,7 @@
           }
         ],
         "responses": {
-          "400": {
+          "200": {
             "description": "Invalid username supplied"
           },
           "404": {
